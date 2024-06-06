@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launcher Watolam</title>
+  <link href="styles/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.21/dist/sweetalert2.min.css">
+  <style>
+    .window-controls {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+    .window-controls button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <div class="window-controls">
+    <button id="minimize-window" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-1 px-3 rounded" onclick="minimizeWindow()">_</button>
+    <button id="close-window" class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded" onclick="closeWindow()">X</button>
+  </div>
+  <div class="flex flex-col items-center justify-center min-h-screen">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-md w-96">
+      <h1 class="text-3xl font-bold mb-4 text-center">Launcher Watolam</h1>
+      <p class="mb-6 text-center">Bienvenido al launcher de Watolam</p>
+      <button id="launch-minecraft" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full mb-4" onclick="launchMinecraft()">Abrir Minecraft</button>
+      <p id="message" class="text-center mb-4"></p>
+      <p id="update-status" class="text-center mb-4"></p>
+      <div id="notification" class="hidden text-center mb-4">
+        <!-- <p id="message" class="mb-2"></p> -->
+        <button id="restart-button" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded hidden">Restart</button>
+      </div>
+    </div>
+  </div>
+  <script src="./renderer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.21/dist/sweetalert2.min.js"></script>
+</body>
+</html>

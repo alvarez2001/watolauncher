@@ -1,0 +1,51 @@
+{
+  "name": "watolauncher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:css": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css --watch",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "watofier.com",
+    "productName": "WatolamLauncher",
+    "directories": {
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "electron-log": "^5.1.5",
+    "electron-updater": "^6.3.0-alpha.4",
+    "fs-extra": "^11.2.0",
+    "https": "^1.0.0",
+    "sweetalert2": "^11.11.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "electron": "^30.0.9",
+    "electron-builder": "^25.0.0-alpha.9",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
+  }
+}
