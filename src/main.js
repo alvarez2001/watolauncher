@@ -48,9 +48,9 @@ function createWindow() {
     // mainWindow.setMenuBarVisibility(false);
     mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
-    mainWindow.once('ready-to-show', () => {
-        autoUpdater.checkForUpdatesAndNotify();
-    });
+    // mainWindow.once('ready-to-show', () => {
+    //     autoUpdater.checkForUpdatesAndNotify();
+    // });
 }
 
 app.on('ready', async () => {
@@ -276,16 +276,16 @@ ipcMain.on('close-window', () => {
     mainWindow.close();
 });
 
-autoUpdater.on('update-available', () => {
-    log.info('Update available.');
-    mainWindow.webContents.send('update-available');
-});
+// autoUpdater.on('update-available', () => {
+//     log.info('Update available.');
+//     mainWindow.webContents.send('update-available');
+// });
 
-autoUpdater.on('update-downloaded', () => {
-    log.info('Update downloaded.');
-    mainWindow.webContents.send('update-downloaded');
-});
+// autoUpdater.on('update-downloaded', () => {
+//     log.info('Update downloaded.');
+//     mainWindow.webContents.send('update-downloaded');
+// });
 
-ipcMain.on('restart-app', () => {
-    autoUpdater.quitAndInstall();
-});   
+// ipcMain.on('restart-app', () => {
+//     autoUpdater.quitAndInstall();
+// });   

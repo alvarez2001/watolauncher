@@ -1,6 +1,6 @@
 {
   "name": "watolauncher",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "src/main.js",
   "scripts": {
@@ -27,7 +27,8 @@
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "WatoLauncher"
     }
   },
   "keywords": [],

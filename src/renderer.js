@@ -26,6 +26,7 @@ function launchMinecraft() {
         hideLoading();
     });
 
+    closeWindow();
     showLoading('Launching Minecraft...');
 }
 
